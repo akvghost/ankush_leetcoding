@@ -3,31 +3,30 @@
 class RmD
 {
 	public int removeDuplicates(int[] nums) {
-		int [] arr= new int[nums.length];
+		int []copyArr = nums;
+		copyArr[0] = 999;
+		System.out.println(copyArr[0]);	
+		for (int i =1; i<nums.length;i++ ) {
+			if(nums[i-1] == nums[i]){
+				
+				copyArr[i-1] = nums[i-1];
+				nums[i-1]=999;
 
-		for(int i =0;i<nums.length;i++)
-		{
-			for(int j=i+1;j<numLength;j++)
-			{
-				if(nums[i]==nums[j] && !arr.contains(nums[i]))
-				{	arr[i]=nums[j];
-					continue;
-				}
-				else
-				{
-					arr[i]=nums[i];
-					break;
-				}
-			}
+			}			
 		}
-        return 0;
+		for (int i =0 ; i<copyArr.length; i++) {
+			System.out.print(copyArr[i]+"x");
+		}
+
+		return 0;
     }
 }
 
 public class RemoveDuplicates
 {public static void main(String[] args) {
 	RmD o = new RmD();
-
+	int [] ar ={1,2,3,4,4,3};
+	o.removeDuplicates(ar);
 }
 	
 }

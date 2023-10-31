@@ -10,9 +10,9 @@
 public class RomanToInt{
 	public static void main(String[] args){
 		// System.out.println("Roman to Integer Converter");
-		// ServiceToRomanToInt serve = new ServiceToRomanToInt();
+		ServiceToRomanToInt serve = new ServiceToRomanToInt();
 		ServiceToRomanToInt serve1 = new ServiceToRomanToInt();
-		// System.out.println("Number converted : "+serve.romanToInt("MCMXCIV"));//VX is wrong
+		System.out.println("Number converted : "+serve.romanToInt("MCMXCIV"));//VX is wrong
 		// System.out.println("This is object :"+serve);
 		// System.out.println("This is object :"+serve1);
 		// serve.romanToInt("XVII");
